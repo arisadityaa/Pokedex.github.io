@@ -144,10 +144,11 @@
             },
             watch:{
                 search(){
+                    this.search = this.search.toLowerCase()
                     let filterPokemon = this.gen1Pokemon.filter(item =>{
                         return item.name.includes(this.search)
                     })
-                    this.sugestPokemon = filterPokemon.slice(0,3)
+                    this.sugestPokemon = filterPokemon.slice(0,2)
                     // console.log(this.sugestPokemon)
                 }
             },
